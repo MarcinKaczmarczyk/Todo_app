@@ -6339,3 +6339,165 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Mar
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 48 more
+2022-01-31 18:24:42 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1749)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:470)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-01-31 18:25:09 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1749)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:470)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-02-11 12:01:26 database: flush
+org.h2.message.DbException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 41 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 35 more
+2022-02-11 12:01:26 database: flush
+org.h2.message.DbException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 41 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Marcin/Desktop/programowanie/udemy/springBoot/todo-app/todo-db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 35 more
+2022-02-11 15:35:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT TASK0_.ID AS ID1_3_0_, TASKGROUP1_.ID AS ID1_2_1_, TASK0_.CREATED_ON AS CREATED_2_3_0_, TASK0_.UPDATED_ON AS UPDATED_3_3_0_, TASK0_.DEADLINE AS DEADLINE4_3_0_, TASK0_.DESCRIPTION AS DESCRIPT5_3_0_, TASK0_.DONE AS DONE6_3_0_, TASK0_.TASK_GROUP_ID AS TASK_GRO7_3_0_, TASKGROUP1_.DESCRIPTION AS DESCRIPT2_2_1_, TASKGROUP1_.DONE AS DONE3_2_1_, TASKGROUP1_.PROJECT_ID AS PROJECT_4_2_1_ FROM TASKS TASK0_ INNER JOIN TASK_GROUPS TASKGROUP1_ ON WHERE[*] TASKGROUP1_.ID=?"; oczekiwano "NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT TASK0_.ID AS ID1_3_0_, TASKGROUP1_.ID AS ID1_2_1_, TASK0_.CREATED_ON AS CREATED_2_3_0_, TASK0_.UPDATED_ON AS UPDATED_3_3_0_, TASK0_.DEADLINE AS DEADLINE4_3_0_, TASK0_.DESCRIPTION AS DESCRIPT5_3_0_, TASK0_.DONE AS DONE6_3_0_, TASK0_.TASK_GROUP_ID AS TASK_GRO7_3_0_, TASKGROUP1_.DESCRIPTION AS DESCRIPT2_2_1_, TASKGROUP1_.DONE AS DONE3_2_1_, TASKGROUP1_.PROJECT_ID AS PROJECT_4_2_1_ FROM TASKS TASK0_ INNER JOIN TASK_GROUPS TASKGROUP1_ ON WHERE[*] TASKGROUP1_.ID=?"; expected "NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select task0_.id as id1_3_0_, taskgroup1_.id as id1_2_1_, task0_.created_on as created_2_3_0_, task0_.updated_on as updated_3_3_0_, task0_.deadline as deadline4_3_0_, task0_.description as descript5_3_0_, task0_.done as done6_3_0_, task0_.task_group_id as task_gro7_3_0_, taskgroup1_.description as descript2_2_1_, taskgroup1_.done as done3_2_1_, taskgroup1_.project_id as project_4_2_1_ from tasks task0_ inner join task_groups taskgroup1_ on where taskgroup1_.id=? [42001-200]
+2022-02-11 15:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT TASK0_.ID AS ID1_3_0_, TASKGROUP1_.ID AS ID1_2_1_, TASK0_.CREATED_ON AS CREATED_2_3_0_, TASK0_.UPDATED_ON AS UPDATED_3_3_0_, TASK0_.DEADLINE AS DEADLINE4_3_0_, TASK0_.DESCRIPTION AS DESCRIPT5_3_0_, TASK0_.DONE AS DONE6_3_0_, TASK0_.TASK_GROUP_ID AS TASK_GRO7_3_0_, TASKGROUP1_.DESCRIPTION AS DESCRIPT2_2_1_, TASKGROUP1_.DONE AS DONE3_2_1_, TASKGROUP1_.PROJECT_ID AS PROJECT_4_2_1_ FROM TASKS TASK0_ INNER JOIN TASK_GROUPS TASKGROUP1_ ON WHERE[*] TASKGROUP1_.ID=?"; oczekiwano "NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT TASK0_.ID AS ID1_3_0_, TASKGROUP1_.ID AS ID1_2_1_, TASK0_.CREATED_ON AS CREATED_2_3_0_, TASK0_.UPDATED_ON AS UPDATED_3_3_0_, TASK0_.DEADLINE AS DEADLINE4_3_0_, TASK0_.DESCRIPTION AS DESCRIPT5_3_0_, TASK0_.DONE AS DONE6_3_0_, TASK0_.TASK_GROUP_ID AS TASK_GRO7_3_0_, TASKGROUP1_.DESCRIPTION AS DESCRIPT2_2_1_, TASKGROUP1_.DONE AS DONE3_2_1_, TASKGROUP1_.PROJECT_ID AS PROJECT_4_2_1_ FROM TASKS TASK0_ INNER JOIN TASK_GROUPS TASKGROUP1_ ON WHERE[*] TASKGROUP1_.ID=?"; expected "NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select task0_.id as id1_3_0_, taskgroup1_.id as id1_2_1_, task0_.created_on as created_2_3_0_, task0_.updated_on as updated_3_3_0_, task0_.deadline as deadline4_3_0_, task0_.description as descript5_3_0_, task0_.done as done6_3_0_, task0_.task_group_id as task_gro7_3_0_, taskgroup1_.description as descript2_2_1_, taskgroup1_.done as done3_2_1_, taskgroup1_.project_id as project_4_2_1_ from tasks task0_ inner join task_groups taskgroup1_ on where taskgroup1_.id=? [42001-200]
+2022-02-11 15:38:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT '*' AS COL_0_0_ FROM TASKS TASK0_ INNER JOIN TASK_GROUPS TASKGROUP1_ ON WHERE[*] TASKGROUP1_.ID=?"; oczekiwano "NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT '*' AS COL_0_0_ FROM TASKS TASK0_ INNER JOIN TASK_GROUPS TASKGROUP1_ ON WHERE[*] TASKGROUP1_.ID=?"; expected "NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select '*' as col_0_0_ from tasks task0_ inner join task_groups taskgroup1_ on where taskgroup1_.id=? [42001-200]

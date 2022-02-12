@@ -3,6 +3,7 @@ package io.github.MarcinK.todoapp.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Entity
 @Table(name = "tasks")
@@ -23,12 +24,18 @@ public class Task {
 
 
 
-    Task() {
+   public Task() {
     }
 
     public Task(String description, LocalDateTime deadline){
+       this(description,deadline,null);
+    }
+    public Task(String description, LocalDateTime deadline, TaskGroup group){
         this.description=description;
         this.deadline=deadline;
+        if (group!=null){
+            this.group=group;
+        }
 
     }
 
@@ -87,5 +94,16 @@ public class Task {
         this.deadline = deadline;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Task task = (Task) o;
+        return id == task.id && done == task.done && Objects.equals(description, task.description) && Objects.equals(deadline, task.deadline) && Objects.equals(audit, task.audit) && Objects.equals(group, task.group);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, description, done, deadline, audit, group);
+    }
 }

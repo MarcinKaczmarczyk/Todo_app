@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class TaskConfigurationProperties {
     private Template template;
 
+
     public Template getTemplate() {
         return template;
     }

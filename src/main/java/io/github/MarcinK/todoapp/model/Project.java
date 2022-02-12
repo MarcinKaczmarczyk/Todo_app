@@ -24,23 +24,31 @@ public class Project {
         return description;
     }
 
-    void setDescription(String description) {
+   public void setDescription(String description) {
         this.description = description;
     }
 
-    Set<TaskGroup> getGroups() {
+   public Set<TaskGroup> getGroups() {
         return groups;
     }
 
-    void setGroups(Set<TaskGroup> groups) {
+   public void setGroups(Set<TaskGroup> groups) {
         this.groups = groups;
     }
 
-    Set<ProjectStep> getSteps() {
+   public Set<ProjectStep> getSteps() {
         return steps;
     }
 
-    void setSteps(Set<ProjectStep> projectSteps) {
+   public void setSteps(Set<ProjectStep> projectSteps) {
         this.steps = projectSteps;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    void setId(int id) {
+        this.id = id;
     }
 }

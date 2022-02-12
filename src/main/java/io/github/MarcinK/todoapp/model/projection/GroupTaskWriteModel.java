@@ -1,10 +1,11 @@
 package io.github.MarcinK.todoapp.model.projection;
 
 import io.github.MarcinK.todoapp.model.Task;
+import io.github.MarcinK.todoapp.model.TaskGroup;
 
 import java.time.LocalDateTime;
 
-class GroupTaskWriteModel {
+public class GroupTaskWriteModel {
 
     private String description;
     private LocalDateTime deadline;
@@ -24,7 +25,7 @@ class GroupTaskWriteModel {
     public void setDeadline(LocalDateTime deadline) {
         this.deadline = deadline;
     }
-    public Task toTask(){
-        return new Task(description, deadline);
+    public Task toTask(TaskGroup result){
+        return new Task(description, deadline, result);
     }
 }
