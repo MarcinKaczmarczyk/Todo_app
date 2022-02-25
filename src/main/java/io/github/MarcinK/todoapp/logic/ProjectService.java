@@ -38,7 +38,7 @@ public class ProjectService {
         if (!config.getTemplate().isAllowMultipleTasks() && groupRepository.existsByDoneIsFalseAndProject_Id(projectId)) {
             throw new IllegalStateException("Only one undone group from project is allowed");
         }
-        GroupReadModel result = projectRepository.findById(projectId)
+        return projectRepository.findById(projectId)
                 .map(project -> {
                     var targetGroup = new GroupWriteModel();
                     targetGroup.setDescription(project.getDescription());
@@ -50,11 +50,10 @@ public class ProjectService {
                                                 task.setDeadline(deadline.plusDays(projectStep.getDaysToDeadline()));
                                                 return task;
                                             }
-                                    ).collect(Collectors.toSet())
+                                    ).collect(Collectors.toList())
                     );
                    return taskGroupService.createGroup(targetGroup,project);
                 }).orElseThrow(() -> new IllegalArgumentException("Project with given id not found"));
-        return result;
     }
 
 }

@@ -1,6 +1,12 @@
 spring:
   h2.console:
         enabled: false
-
+  datasource:
+    url: 'jdbc:h2:mem:todo-db'
+keycloak:
+  auth-server-url: 'http://localhost:8080/auth'
+  realm: 'TodoApp'
+  resource: 'todo-app-client'
+  public-client: true
 
 

@@ -11,11 +11,16 @@ import org.springframework.context.annotation.Configuration;
 class LogicConfiguration {
 
     @Bean
-    ProjectService projectService(final ProjectRepository projectRepo, final TaskConfigurationProperties config, final TaskGroupRepository taskGroupRepo, TaskGroupService taskGroupService) {
+    ProjectService projectService(
+            final ProjectRepository projectRepo,
+            final TaskConfigurationProperties config,
+            final TaskGroupRepository taskGroupRepo,
+            final TaskGroupService taskGroupService) {
         return new ProjectService(projectRepo, config, taskGroupRepo, taskGroupService);
     }
+
     @Bean
-    TaskGroupService taskGroupService(final TaskGroupRepository taskGroupRepo,final TaskRepository taskRepo){
+    TaskGroupService taskGroupService(final TaskGroupRepository taskGroupRepo, final TaskRepository taskRepo) {
         return new TaskGroupService(taskGroupRepo, taskRepo);
     }
 }

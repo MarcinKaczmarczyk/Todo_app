@@ -19,8 +19,7 @@ public class TaskGroupService {
 
 
     TaskGroupService(final TaskGroupRepository repository, TaskRepository taskRepository){
-        taskGroupRepository=repository;
-
+       this.taskGroupRepository=repository;
         this.taskRepository = taskRepository;
     }
     public GroupReadModel createGroup(GroupWriteModel source){
@@ -44,11 +43,11 @@ public class TaskGroupService {
         result.setDone(!result.isDone());
         taskGroupRepository.save(result);
     }
-    public List<GroupTaskReadModel> readTasksForGroup(Integer id){
-        return taskRepository.findAllByGroup_Id(id).stream()
-                .map(GroupTaskReadModel::new)
-                .collect(Collectors.toList());
-    }
+//    public List<GroupTaskReadModel> readTasksForGroup(Integer id){
+//        return taskRepository.findAllByGroup_Id(id).stream()
+//                .map(GroupTaskReadModel::new)
+//                .collect(Collectors.toList());
+//    }
     public boolean isExists(int id){
         return taskGroupRepository.existsById(id);
     }
